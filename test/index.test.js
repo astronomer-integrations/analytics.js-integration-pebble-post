@@ -55,6 +55,17 @@ describe('PebblePost', function() {
       analytics.initialize();
     });
 
+    describe('#page', function() {
+      beforeEach(function() {
+        analytics.stub(pebblePost, '_fireScript');
+      });
+
+      it('should call page', function() {
+        analytics.page();
+        analytics.called(pebblePost._fireScript);
+      });
+    });
+
     describe('#track', function() {
       beforeEach(function() {
         analytics.stub(pebblePost, '_fireScript');
