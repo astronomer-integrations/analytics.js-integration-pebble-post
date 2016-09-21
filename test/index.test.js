@@ -12,7 +12,8 @@ var expectedPp = {
   email: 'alois@astronomer.io',
   orderValue: '100',
   orderId: 'orderId',
-  tags: 'VIP'
+  tags: 'VIP',
+  endUrl: ''
 };
 
 describe('PebblePost', function() {
