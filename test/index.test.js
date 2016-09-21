@@ -58,17 +58,20 @@ describe('PebblePost', function() {
     describe('#page', function() {
       beforeEach(function() {
         analytics.stub(pebblePost, '_fireScript');
+        analytics.stub(pebblePost, 'addPebblePostParams');
       });
 
       it('should call page', function() {
         analytics.page();
         analytics.called(pebblePost._fireScript);
+        analytics.called(pebblePost.addPebblePostParams);
       });
     });
 
     describe('#track', function() {
       beforeEach(function() {
         analytics.stub(pebblePost, '_fireScript');
+        analytics.spy(pebblePost, 'addPebblePostParams');
         analytics.identify('1234', {
           'name': 'Craig Barreras',
           'email': 'alois@astronomer.io',
@@ -83,6 +86,7 @@ describe('PebblePost', function() {
         analytics.track('My Custom Event', { order_id: 'orderId', value: '100', tags: 'VIP' });
         analytics.deepEqual(window._pp, expectedPp);
         analytics.called(pebblePost._fireScript);
+        analytics.called(pebblePost.addPebblePostParams);
       });
     });
 
