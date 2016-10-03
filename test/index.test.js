@@ -13,14 +13,17 @@ var expectedPp = {
   orderValue: '100',
   orderId: 'orderId',
   tags: 'VIP',
-  endUrl: ''
+  endUrl: 'hello'
 };
 
 describe('PebblePost', function() {
   var analytics;
   var pebblePost;
   var options = {
-    siteId: 'mySiteId'
+    siteId: 'mySiteId',
+    endUrl: {
+      'Email Sign Up': 'hello'
+    }
   };
 
   beforeEach(function() {
@@ -40,6 +43,7 @@ describe('PebblePost', function() {
 
   it('should have the correct settings', function() {
     analytics.compare(PebblePost, integration('Pebble Post')
+                      .mapping('endUrl')
                       .option('siteId', '')
                       .global('_pp'));
   });
@@ -84,7 +88,7 @@ describe('PebblePost', function() {
       });
 
       it('should call track', function() {
-        analytics.track('My Custom Event', { order_id: 'orderId', value: '100', tags: 'VIP' });
+        analytics.track('Email Sign Up', { order_id: 'orderId', value: '100', tags: 'VIP' });
         analytics.deepEqual(window._pp, expectedPp);
         analytics.called(pebblePost._fireScript);
         analytics.called(pebblePost.addPebblePostParams);
