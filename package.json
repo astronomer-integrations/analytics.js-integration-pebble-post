@@ -4,7 +4,7 @@
   "description": "An analytics.js integration for Pebble Post",
   "main": "lib/index.js",
   "scripts": {
-    "test": "karma start"
+    "test": "karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
