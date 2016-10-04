@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/astronomer-integrations/analytics.js-integration-pebble-post.svg?style=svg)](https://circleci.com/gh/astronomer-integrations/analytics.js-integration-pebble-post)
+
 # analytics.js-integration-pebble-post
 An analytics.js integration for Pebble Post
 
