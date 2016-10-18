@@ -10,6 +10,8 @@ Available API methods:
 * Identify
 * Track
 
+Please see our [guide to using these methods here](http://docs.astronomer.io/docs/event-type-guide).  
+
 ## Getting Credentials from PebblePost:
 
 You can obtain your Site ID from your PebblePost account manager.  Don't have an account?  [Sign up here](http://www.pebblepost.com/).
