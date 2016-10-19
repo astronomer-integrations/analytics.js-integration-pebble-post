@@ -3,14 +3,13 @@
 ![alt text](https://s15.postimg.org/j9e06qlqj/pebblepost_logo.png "PebblePost analytics integration")
 # An analytics.js integration for [PebblePost](http://www.pebblepost.com/), by [Astronomer](http://www.astronomer.io/)
 
-This integration allows you to easily send customer data to PebblePost.
+This integration allows you to easily send customer data to PebblePost (a digital direct mail platform). 
 
-Available API methods: 
+Available Analytics.js methods for this integration: 
 * Page
-* Identify
 * Track
 
-Please see our [guide to using these methods here](http://docs.astronomer.io/docs/event-type-guide" target="_blank).  
+Please see our [guide to using the Analytics.js methods here](http://docs.astronomer.io/docs/event-type-guide).  
 
 ## Getting Credentials from PebblePost:
 
@@ -32,7 +31,7 @@ To override the URL of a page being viewed by a user with any URL scheme, provid
 Once you've submitted your desired configuration, choose "Save & Close", and then toggle your integration on.  From here, we'll build your new configuration on our servers (this can take between 5 - 15 minutes).
 
 ## You're Ready to Call Methods!
-Please visit [this repo]() to learn how to call the available Analytics.js methods.
+Please see our [guide to using the Analytics.js methods here](http://docs.astronomer.io/docs/event-type-guide). 
 
 # Open-Source at Astronomer
 
